@@ -1,45 +1,15 @@
 {
   "name": "dsh-plugin-session-group",
-  "description": "DSH Web 侧边栏会话列表按项目(cwd)分组：分组模式接管 sidebar.workspaces，原始模式让位给 DSH 内置列表，纯客户端、零宿主路由。 Session-group view for DeepSeek Harness: groups the Web sidebar session list by project (cwd) in a collapsible tree; a 'raw' mode defers to the built-in list. Pure client-side, no host routes.",
-  "version": "1.2.0",
-  "license": "MIT",
-  "author": "guiyidu-ui",
+  "description": "DSH Web 侧边栏会话列表按项目(cwd)分组：分组模式接管 sidebar.workspaces，原始模式让位给 DSH 内置列表，纯客户端、零宿主路由",
+  "version": "1.3.0",
   "type": "module",
   "main": "lib/index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/guiyidu-ui/dsh-plugin-session-group.git"
-  },
-  "homepage": "https://github.com/guiyidu-ui/dsh-plugin-session-group",
-  "bugs": {
-    "url": "https://github.com/guiyidu-ui/dsh-plugin-session-group/issues"
-  },
-  "keywords": [
-    "deepseek-harness",
-    "dsh",
-    "dsh-plugin",
-    "session-group",
-    "sidebar",
-    "workspaces",
-    "project-group",
-    "cwd",
-    "session-list",
-    "web-ui",
-    "client-side"
-  ],
-  "files": [
-    "lib/index.js",
-    "lib/client.js"
-  ],
   "exports": {
     ".": "./lib/index.js",
     "./client": "./lib/client.js",
     "./package.json": "./package.json"
   },
   "dsh": {
-    "engines": {
-      "dsh": ">=0.1.2-alpha.4"
-    },
     "client": {
       "platform": "web",
       "inject": ["slots", "sessions", "uiWorkspace"]
